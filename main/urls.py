@@ -1,9 +1,10 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [
-    path('home/', views.index, name='home'),       # главная страница на корневой URL
-    path('about/', views.about, name='about')
-]
+app_name = 'main'  # Пространство имен приложения
 
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+]
 

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main',
+    'news',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,8 +56,8 @@ ROOT_URLCONF = 'web_bulba1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],  # Путь к общей папке шаблонов
+        'APP_DIRS': True,  # Автоматический поиск шаблонов в приложениях
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
