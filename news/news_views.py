@@ -13,7 +13,7 @@ def create(request):
         form = ArticlesForm(request.POST)
         if form.is_valid():
             form.save()
-            #return redirect('news_home') почему то не работает
+            #return redirect('news_home') ошибка
         else:
             error = 'Форма была заполнена не верно'
 
