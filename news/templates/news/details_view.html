@@ -7,6 +7,7 @@
         <h1>{{ article.title }}</h1>
         <p>{{ article.date }}</p>
         <p>{{ article.full_text }}</p>
-
+        <a href="{% url 'news:news-delete' article.id %}">Удалить</a>
+        <a href="{% url 'news:news-update' article.id %}">Редактировать</a>
     </div>
 {% endblock content %}
